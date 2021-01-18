@@ -1,7 +1,4 @@
 # coding:utf-8
-#!/usr/bin/python3
-from __future__ import absolute_import
-from __future__ import unicode_literals
 import markdown
 from markdown import Extension
 from markdown.inlinepatterns import Pattern
@@ -63,20 +60,14 @@ def makeExtension(*args, **kwargs):
 class TextClass(unittest.TestCase):
     def test_extends(self):
         import markdown
-        print("aaa")
         md = markdown.Markdown(extensions=['a_markdown_test'])
 
         #日本語を単独で使えるようにしたい 
         text = '''{{{##title
 hoge
 }}}'''
-        print md.convert(text)
+        print(md.convert(text))
 
 if __name__ == "__main__":
-    text = """aaa
-aaa
-aaa
-aaa"""
-    print(text)
-    #unittest.main()
+    unittest.main()
     
